@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"C:\Users\fpf\PycharmProjects\untitled\Automacao"
+$VIRTUAL_ENV = r"C:\Users\fpf\Documents\GitHub\teste_automacao_web\Automacao"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
