@@ -3,6 +3,10 @@ from behave import given, when, then
 # Variável com a url do site a qual iremos utilizar
 base_url= 'http://www.americanas.com.br/'
 
+# Váriaveis dos elementos da página
+element_input = 'h_search-input'
+element_search = 'h_search-btn'
+
 @given(u'acesso a pagina inicial da loja Americanas')
 def step_impl(context):
     context.web.get(base_url)
@@ -11,11 +15,16 @@ def step_impl(context):
 
 @given(u'eu insiro o produto desejado no campo de busca')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Given eu insiro o produto desejado no campo de busca')
+    context.web.element_input = context.web.find_element_by_id('h_search-input')
+    context.web.element_input.send_keys('Iphone 11')
+    #raise NotImplementedError(u'STEP: Given eu insiro o produto desejado no campo de busca')
 
 
 @when(u'clico na opção de pesquisar')
 def step_impl(context):
+    context.web.element_search = context.web.find_element_by_id(element_search)
+    #context.web.element_search.click()
+    context.element_search.send_keys(Keys.ENTER)
     raise NotImplementedError(u'STEP: When clico na opção de pesquisar')
 
 
