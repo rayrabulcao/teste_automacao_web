@@ -5,7 +5,7 @@ base_url= 'http://www.americanas.com.br/'
 
 # Váriaveis dos elementos da página
 element_input = 'h_search-input'
-element_search = 'h_search-btn'
+element_search = 'bhf_icon-search'
 
 @given(u'acesso a pagina inicial da loja Americanas')
 def step_impl(context):
@@ -24,7 +24,7 @@ def step_impl(context):
 def step_impl(context):
     context.web.element_search = context.web.find_element_by_id(element_search)
     #context.web.element_search.click()
-    context.element_search.send_keys(Keys.ENTER)
+    context.web.element_search.send_keys(Keys.ENTER)
     raise NotImplementedError(u'STEP: When clico na opção de pesquisar')
 
 
@@ -41,3 +41,4 @@ def step_impl(context):
 @then(u'então poder adicionar ao carrinho e finalizar a compra')
 def step_impl(context):
     raise NotImplementedError(u'STEP: Then então poder adicionar ao carrinho e finalizar a compra')
+    context.web.base_url.quit()
