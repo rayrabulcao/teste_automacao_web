@@ -8,6 +8,6 @@ Funcionalidade: Consultar um produto no site da Americanas
    Dado acesso a pagina inicial da loja Americanas
    E eu insiro o produto desejado no campo de busca
    Quando clico na opção de pesquisar
-   E a pesquisa me retornar um lista com o produto que busque
+   E a pesquisa me retornar um lista com o produto que busquei
    Então devo selecionar o produto desejado
    E então poder adicionar ao carrinho e finalizar a compra
